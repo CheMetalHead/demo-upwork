@@ -1,0 +1,14 @@
+.logout {
+  position: absolute;
+  width: 100px;
+  padding: 10px;
+  background: white;
+  top: 100px;
+  border: 1px solid;
+
+  &:hover {
+    cursor: pointer;
+    background-color: lightgrey;
+    border: 1px solid transparent;
+  }
+}

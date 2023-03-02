@@ -1,0 +1,79 @@
+.settings {
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+
+  .api-keys-section {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 20%;
+    border-bottom: 1px solid grey;
+    padding: 20px 80px;
+    align-items: center;
+
+    .text-secton {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      .section-header {
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      .section-text {
+        color: grey;
+      }
+    }
+
+    .keys-list {
+      display: flex;
+      flex-direction: column;
+      flex: 2;
+
+      .key-item {
+        display: flex;
+        padding: 8px 16px;
+        border: 1px solid lightgrey;
+        border-radius: 10px;
+        margin-top: 16px;
+        background-color: white;
+
+        .delete-key-button {
+          color: red;
+          margin-left: 4px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .add-keys-container {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+
+    .add-key {
+      display: flex;
+      margin-top: 8px;
+      gap: 8px;
+
+      input {
+        border: none;
+        border-bottom: 1px solid lightgray;
+      }
+
+      .add-key-button {
+        font-weight: 500;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
