@@ -16,9 +16,14 @@ const Navbar = () => {
     "Reporting",
     "Users",
   ];
+  const navLinks = [{title: "Home", link: '/'},
+  {title: "Dashboard", link: 'https://www.google.com'},
+  {title: "Projects", link: '/https://www.google.com'},
+  {title: "Tasks", link: '/https://www.google.com'},
+  {title: "Reporting", link: '/https://www.google.com'},
+  {title: "Users", link: '/https://www.google.com'}]
 
   const handleShowLogout = () => {
-    console.log("test");
     setShowLogout((prevState) => !prevState);
   };
   return (
@@ -27,9 +32,9 @@ const Navbar = () => {
         <Link to={"/"} className="logo-section">
           <span className="logo-text">Untitled UI</span>
         </Link>
-        {navButtons.map((button) => (
-          <Link className="nav-button" key={`nav-button-${button}`}>
-            {button}
+        {navLinks.map((button) => (
+          <Link to={button.link} className="nav-button" key={`nav-button-${button.title}`}>
+            {button.title}
           </Link>
         ))}
       </div>

@@ -34,7 +34,12 @@ function App() {
         },
         {
           path: "/Settings",
-          element: <Settings />,
+          children: [
+            {
+              path: '',
+              element: <Settings />,
+            }
+          ]
         },
       ],
     },

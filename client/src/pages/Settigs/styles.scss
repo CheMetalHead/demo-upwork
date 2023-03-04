@@ -9,7 +9,7 @@
     flex-direction: row;
     justify-content: space-between;
     height: 20%;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid lightgray;
     padding: 20px 80px;
     align-items: center;
 
@@ -26,12 +26,33 @@
         color: grey;
       }
     }
+  }
+  .keys-list-section {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    border-bottom: 1px solid lightgray;
+    padding: 20px 80px;
 
+    .text-secton {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      .section-header {
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      .section-text {
+        color: grey;
+      }
+    }
+    
     .keys-list {
       display: flex;
       flex-direction: column;
       flex: 2;
-
+      
       .key-item {
         display: flex;
         padding: 8px 16px;
@@ -39,11 +60,12 @@
         border-radius: 10px;
         margin-top: 16px;
         background-color: white;
-
+        align-items: center;
+        
         .delete-key-button {
           color: red;
           margin-left: 4px;
-
+          
           &:hover {
             cursor: pointer;
           }
@@ -61,10 +83,13 @@
       display: flex;
       margin-top: 8px;
       gap: 8px;
+      align-items: center;
 
       input {
-        border: none;
-        border-bottom: 1px solid lightgray;
+        border: 1px solid lightgray;
+        padding: 8px 16px;
+        width: 50%;
+        border-radius: 10px;
       }
 
       .add-key-button {

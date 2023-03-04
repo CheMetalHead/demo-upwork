@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./styles.scss";
+import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 
 const Settings = () => {
   const [keys, setKeys] = useState<string[]>(["Key1"]);
@@ -32,7 +33,7 @@ const Settings = () => {
           </div>
         </div>
       </div>
-      <div className="api-keys-section">
+      <div className="keys-list-section">
         <div className="text-secton">
           <span className="section-header">Saved API keys</span>
           <span className="section-text">
@@ -44,7 +45,7 @@ const Settings = () => {
             <div className="key-item">
               <div className="key-value">{key}</div>
               <div onClick={handleDeleteKey(key)} className="delete-key-button">
-                X
+                <DeleteOutlineOutlinedIcon fontSize="small"/>
               </div>
             </div>
           ))}
