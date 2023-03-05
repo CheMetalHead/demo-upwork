@@ -72,5 +72,5 @@ button:focus-visible {
 
 body {
   margin: 0;
-  color: black;
+  color: $black;
 }

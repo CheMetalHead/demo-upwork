@@ -1,6 +1,8 @@
+@import "../../assets/variables";
+
 .login-container {
   height: 100vh;
-  background-color: #3d7cff;
+  background-color: $login-blue;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,7 +11,7 @@
     z-index: 3;
     width: 50%;
     display: flex;
-    background-color: white;
+    background-color: $white;
     border-radius: 10px;
     min-height: 600px;
     overflow: hidden;
@@ -20,7 +22,7 @@
       display: flex;
       flex-direction: column;
       gap: 30px;
-      color: black;
+      color: $black;
       justify-content: space-between;
 
       .left-card-header {
@@ -36,13 +38,17 @@
 
         input {
           border: none;
-          border-bottom: 1px solid lightgray;
+          border-bottom: 1px solid $separator-gray;
           padding: 10px 10px;
         }
 
         .forgot-password-button {
-          color: #3d7cff;
+          color: $login-blue;
           font-weight: 600;
+
+          &:hover {
+            cursor: pointer;
+          }
         }
 
         .login-button {
@@ -50,11 +56,17 @@
           justify-content: center;
           align-self: flex-end;
           display: flex;
-          color: white;
-          background-color: #3d7cff;
+          color: $white;
+          background-color: $login-blue;
           width: 160px;
           height: 48px;
           border-radius: 5px;
+
+          &:hover,
+          &.disabled {
+            cursor: pointer;
+            background-color: $login-blue-faded;
+          }
         }
       }
 
@@ -67,14 +79,19 @@
         }
 
         .sign-up-button {
-          background: #3d7cff;
+          background: $login-blue;
           height: 48px;
           display: flex;
           align-items: center;
           justify-content: center;
-          color: white;
+          color: $white;
           font-weight: bold;
           border-radius: 5px;
+
+          &:hover {
+            cursor: pointer;
+            background-color: $login-blue-faded;
+          }
         }
       }
     }
@@ -88,7 +105,7 @@
       display: flex;
       flex-direction: column;
       gap: 30px;
-      color: white;
+      color: $white;
 
       .right-card-header {
         font-size: 32px;

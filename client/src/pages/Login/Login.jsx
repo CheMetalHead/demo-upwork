@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 import "./styles.scss";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPasswrord] = useState("");
+
+  const handleLoginSubmit = useCallback(() => {
+    alert("Login");
+    setEmail("");
+    setPasswrord("");
+  }, []);
+
   return (
     <div className="login-container">
       <div className="card">
@@ -9,10 +18,27 @@ const Login = () => {
           <div className="login-section">
             <span className="left-card-header">Login</span>
             <form className="login-form">
-              <input type="text" placeholder="Username or mobile number" />
-              <input type="text" placeholder="Password" />
+              <input
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                type="text"
+                placeholder="Username or mobile number"
+              />
+              <input
+                value={password}
+                onChange={(e) => setPasswrord(e.target.value)}
+                type="password"
+                placeholder="Password"
+              />
               <span className="forgot-password-button">Forgot password?</span>
-              <span className="login-button">Login</span>
+              <span
+                className={`login-button ${
+                  email && password ? "" : "disabled"
+                }`}
+                onClick={handleLoginSubmit}
+              >
+                Login
+              </span>
             </form>
           </div>
           <div className="sign-up-section">

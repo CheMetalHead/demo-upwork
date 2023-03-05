@@ -1,3 +1,5 @@
+@import "../../assets/variables";
+
 .main-page {
   display: flex;
   flex-direction: column;
@@ -7,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 80px;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid $separator-gray;
     align-items: center;
 
     .left-side {
@@ -20,7 +22,7 @@
       }
 
       .section-text {
-        color: gray;
+        color: $text-gray;
       }
     }
 
@@ -32,7 +34,7 @@
       .cancel-button,
       .save-button {
         padding: 8px 24px;
-        border: 1px solid lightgrey;
+        border: 1px solid $separator-gray;
         border-radius: 10px;
         font-weight: 500;
         display: flex;
@@ -44,19 +46,19 @@
       }
 
       .save-button {
-        color: white;
-        background-color: #354251;
+        color: $white;
+        background-color: $background-dark-gray;
 
         &:hover {
-          color: #354251;
-          background-color: white;
+          color: $background-dark-gray;
+          background-color: $white;
         }
       }
 
       .cancel-button {
         &:hover {
-          color: white;
-          background-color: #354251;
+          color: $white;
+          background-color: $background-dark-gray;
         }
       }
     }
@@ -66,7 +68,7 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 80px;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid $separator-gray;
   }
 
   .left-side {
@@ -80,7 +82,7 @@
     }
 
     .section-text {
-      color: gray;
+      color: $text-gray;
     }
   }
 
@@ -90,8 +92,8 @@
       font-weight: bold;
       margin-bottom: 8px;
       padding: 6px 16px;
-      background-color: white;
-      border: 1px solid lightgray;
+      background-color: $white;
+      border: 1px solid $separator-gray;
       border-radius: 5px;
       display: block;
     }
@@ -102,8 +104,8 @@
       gap: 8px;
       .link-field,
       .link-name {
-        background-color: white;
-        border: 1px solid lightgray;
+        background-color: $white;
+        border: 1px solid $separator-gray;
         padding: 6px 16px;
         display: block;
         flex: 1;
@@ -120,7 +122,7 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 80px;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid $separator-gray;
 
     .left-side {
       .header {
@@ -129,12 +131,12 @@
       }
 
       .text {
-        color: gray;
+        color: $text-gray;
       }
     }
 
     .text-field {
-      border-color: lightgray;
+      border-color: $separator-gray;
     }
   }
 
@@ -142,7 +144,7 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 80px;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid $separator-gray;
 
     .text-section {
       display: flex;
@@ -154,7 +156,7 @@
       }
 
       .text {
-        color: gray;
+        color: $text-gray;
       }
     }
 
@@ -168,7 +170,7 @@
 
     .input-field {
       flex: 1;
-      border: 1px solid lightgray;
+      border: 1px solid $separator-gray;
       border-radius: 10px;
       height: 100px;
       padding: 12px;
@@ -184,7 +186,7 @@
         justify-content: center;
         display: flex;
         align-items: center;
-        background-color: lightgray;
+        background-color: $separator-gray;
       }
     }
   }
@@ -212,7 +214,7 @@
 
         &:hover {
           cursor: pointer;
-          color: lightgray;
+          color: $separator-gray;
         }
       }
     }
@@ -226,7 +228,6 @@
         flex-direction: row;
 
         .checkbox {
-          // padding-right: 8px;
           align-self: flex-start;
         }
 
@@ -241,7 +242,7 @@
           }
 
           .text {
-            color: gray;
+            color: $text-gray;
           }
         }
       }
